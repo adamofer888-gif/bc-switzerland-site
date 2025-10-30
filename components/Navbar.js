@@ -1,20 +1,20 @@
+"use client";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header style={{
-      position:"sticky", top:0, zIndex:50,
-      background:"var(--bg-soft)", borderBottom:"1px solid var(--stroke)"
-    }}>
-      <nav className="container" style={{display:"flex",alignItems:"center",justifyContent:"space-between",height:64}}>
-        <Link href="/" style={{fontWeight:800, letterSpacing:".3px"}}>DTE Holding AG</Link>
+    <nav className="w-full bg-white border-b">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <Link href="/" className="text-xl font-semibold text-[#0A1A33]">
+          DTE Holding AG
+        </Link>
 
-        <div style={{display:"flex", gap:16}}>
-          <Link href="/services/capital-a-risque" className="btn btn--ghost">Capital à Risque</Link>
-          <Link href="/team" className="btn btn--ghost">Team</Link>
-          <Link href="/contact" className="btn btn--primary">Contact</Link>
+        <div className="flex gap-6 text-[#0A1A33] font-medium">
+          <Link href="/services" className="hover:text-gray-600">Services</Link>
+          <Link href="/team" className="hover:text-gray-600">Team</Link>
+          <Link href="/contact" className="hover:text-gray-600">Contact</Link>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }
