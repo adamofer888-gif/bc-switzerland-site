@@ -1,0 +1,13 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body { @apply bg-night text-white; }
+.container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+.card { @apply rounded-3xl p-6 bg-card ring-1 ring-white/10; }
+.btn { @apply inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-sm font-semibold transition; }
+.btn-primary { @apply text-black shadow; background-color: #D4AF37; }
+.btn-ghost { @apply text-white ring-1 ring-white/20; }
+h1,h2 { @apply font-semibold; }
