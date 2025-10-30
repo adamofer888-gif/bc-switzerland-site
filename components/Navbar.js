@@ -8,7 +8,6 @@ export default function Navbar() {
         <Link href="/" className="text-xl font-semibold text-[#0A1A33]">
           DTE Holding AG
         </Link>
-
         <div className="flex gap-6 text-[#0A1A33] font-medium">
           <Link href="/services" className="hover:text-gray-600">Services</Link>
           <Link href="/team" className="hover:text-gray-600">Team</Link>
