@@ -6,6 +6,15 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <main>
+    {/* BANDEAU IMAGE */}
+<section
+  aria-label="Hero visuel"
+  className="h-56 md:h-72 w-full rounded-2xl mb-10 bg-cover bg-center ring-1 ring-white/10 shadow-xl"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1600&q=80')"
+  }}
+/>
       <section className="section" style={{background:"linear-gradient(180deg, rgba(200,160,78,.08), transparent)"}}>
         <div className="container">
           <div className="kicker">Nos services</div>
