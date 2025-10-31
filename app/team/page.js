@@ -1,5 +1,3 @@
-"use client";
-
 import "./team.css";
 
 export const metadata = {
@@ -19,19 +17,16 @@ export default function TeamPage() {
             "url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80')",
         }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-white">
-          Notre équipe
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white">Notre équipe</h1>
       </section>
 
-      {/* TEAM CARDS */}
+      {/* FICHE DES DIRIGEANTS */}
       <section className="container py-24">
         <h2 className="text-center text-3xl font-semibold text-white mb-16 fade-block">
           Dirigeants DTE Holding AG
         </h2>
 
         <div className="grid gap-10 md:grid-cols-3 fade-block">
-          {/* CEO */}
           <article className="team-card">
             <h3 className="team-name">Daniel Thomas Eggenberger</h3>
             <p className="team-role">CEO – Chief Executive Officer</p>
@@ -41,7 +36,6 @@ export default function TeamPage() {
             </p>
           </article>
 
-          {/* COO */}
           <article className="team-card">
             <h3 className="team-name">Navneet Patel</h3>
             <p className="team-role">COO – Chief Operating Officer</p>
@@ -51,7 +45,6 @@ export default function TeamPage() {
             </p>
           </article>
 
-          {/* CFO */}
           <article className="team-card">
             <h3 className="team-name">Adam Ofer</h3>
             <p className="team-role">CFO – Chief Financial Officer</p>
@@ -64,4 +57,4 @@ export default function TeamPage() {
       </section>
     </main>
   );
-      }
+}
