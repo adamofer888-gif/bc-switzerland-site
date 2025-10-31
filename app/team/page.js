@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Notre Équipe - DTE Holding AG",
-  description: "Découvrez les dirigeants et experts de DTE Holding AG.",
+  title: "Team — DTE Holding AG",
+  description: "Direction & opérations.",
 };
 
 const TEAM = [
@@ -11,17 +11,26 @@ const TEAM = [
 
 export default function TeamPage() {
   return (
-    <main className="max-w-5xl mx-auto px-4 py-20">
-      <h1 className="text-4xl font-bold mb-10">Notre Équipe</h1>
-      <div className="grid md:grid-cols-3 gap-8">
-        {TEAM.map((member) => (
-          <div key={member.name} className="p-6 bg-white rounded-xl shadow">
-            <h2 className="text-xl font-semibold">{member.name}</h2>
-            <p className="text-blue-700 font-medium">{member.role}</p>
-            <p className="text-gray-600 mt-2 text-sm">{member.bio}</p>
-          </div>
-        ))}
+    <main className="section">
+      <div className="container">
+        <div className="kicker">Équipe</div>
+        <h1 className="h1">Direction</h1>
+        <div className="cards" style={{marginTop:24}}>
+          {TEAM.map((m) => (
+            <article key={m.name} className="card">
+              <div style={{
+                width:56,height:56,borderRadius:"50%",display:"grid",placeItems:"center",
+                background:"var(--gold-soft)",color:"var(--gold)",fontWeight:700,marginBottom:12
+              }}>
+                {m.name.split(" ").map(w=>w[0]).join("")}
+              </div>
+              <div className="card__title">{m.name}</div>
+              <div className="muted" style={{marginBottom:10}}>{m.role}</div>
+              <p className="card__muted">{m.bio}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </main>
   );
-}
+                                            }
