@@ -1,41 +1,50 @@
 export const metadata = {
   title: "Services — DTE Holding AG",
-  description:
-    "Capital à Risque, Développement Digital et Conseil Stratégique. Des services pensés pour accélérer vos projets.",
+  description: "Gestion de patrimoine, capital à risque, conseil. Exécution suisse, relation client forte.",
 };
 
 export default function ServicesPage() {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-16">
-      <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#B38B47]">
-        Nos Services
-      </h1>
-      <p className="mt-4 text-gray-300 md:text-lg leading-relaxed">
-        Nous combinons investissement, produit et technologie pour transformer les idées
-        en résultats mesurables — avec exigence et élégance.
-      </p>
+    <main>
+      <section className="section" style={{background:"linear-gradient(180deg, rgba(200,160,78,.08), transparent)"}}>
+        <div className="container">
+          <div className="kicker">Nos services</div>
+          <h1 className="h1">Des solutions pensées pour <span style={{color:"var(--gold)"}}>protéger</span> et <span style={{color:"var(--gold)"}}>accélérer</span></h1>
+          <p className="lead">Approche sur-mesure, exigence de gouvernance, reporting clair.</p>
 
-      <div className="mt-10 grid md:grid-cols-2 gap-6">
-        <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-xl font-medium text-[#B38B47]">Capital à Risque</h2>
-          <p className="mt-2 text-gray-300">
-            Accompagnement early-stage & growth, structuration des deals et gouvernance.
-          </p>
-          <a href="/contact" className="inline-block mt-4 rounded-xl border border-white/15 px-4 py-2">
-            Nous contacter
-          </a>
-        </section>
+          <div className="cards" style={{marginTop:24}}>
+            <article className="card">
+              <div className="kicker">Gestion de patrimoine</div>
+              <div className="card__title">Allocation & relation dédiée</div>
+              <p className="card__muted">
+                Stratégie d’allocation, diversification, garde, et suivi discret. Relation client prioritaire.
+              </p>
+              <div className="hr"></div>
+              <a href="/contact" className="btn btn--gold">Parler à un conseiller</a>
+            </article>
 
-        <section className="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h2 className="text-xl font-medium text-[#B38B47]">Développement Digital</h2>
-          <p className="mt-2 text-gray-300">
-            Produits web & mobiles, optimisation UX, intégrations cloud et automatisations.
-          </p>
-          <a href="/contact" className="inline-block mt-4 rounded-xl border border-white/15 px-4 py-2">
-            Discuter d’un projet
-          </a>
-        </section>
-      </div>
+            <article className="card">
+              <div className="kicker">Capital à risque</div>
+              <div className="card__title">Thèses & due diligence</div>
+              <p className="card__muted">
+                Fintech, deeptech, SaaS : sélection, structuration, gouvernance & board. Tickets flexibles, co-invest.
+              </p>
+              <div className="hr"></div>
+              <a href="/contact" className="btn btn--ghost">Accéder au deal-flow</a>
+            </article>
+
+            <article className="card">
+              <div className="kicker">Conseil</div>
+              <div className="card__title">Stratégie & excellence</div>
+              <p className="card__muted">
+                Vision produit, pricing, M&A, data room, OKR. Exécution pragmatique et mesurable.
+              </p>
+              <div className="hr"></div>
+              <a href="/contact" className="btn btn--ghost">Planifier un échange</a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
