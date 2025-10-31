@@ -1,57 +1,85 @@
 export const metadata = {
-  title: "Services — DTE Holding AG",
-  description: "Gestion de patrimoine, capital à risque, conseil. Exécution suisse, relation client forte.",
+  title: "Services – DTE Holding AG",
+  description:
+    "Gestion de patrimoine, capital à risque et développement digital. Des solutions haut de gamme adaptées à vos objectifs.",
 };
 
 export default function ServicesPage() {
   return (
-    <main>
-    {/* BANDEAU IMAGE */}
-<section
-  aria-label="Hero visuel"
-  className="h-56 md:h-72 w-full rounded-2xl mb-10 bg-cover bg-center ring-1 ring-white/10 shadow-xl"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1600&q=80')"
-  }}
-/>
-      <section className="section" style={{background:"linear-gradient(180deg, rgba(200,160,78,.08), transparent)"}}>
-        <div className="container">
-          <div className="kicker">Nos services</div>
-          <h1 className="h1">Des solutions pensées pour <span style={{color:"var(--gold)"}}>protéger</span> et <span style={{color:"var(--gold)"}}>accélérer</span></h1>
-          <p className="lead">Approche sur-mesure, exigence de gouvernance, reporting clair.</p>
+    <main className="max-w-6xl mx-auto px-6 py-16">
+      {/* ✅ BANDEAU IMAGE */}
+      <section
+        aria-label="Hero visuel"
+        className="w-full h-72 rounded-2xl mb-16 bg-center bg-cover"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      ></section>
 
-          <div className="cards" style={{marginTop:24}}>
-            <article className="card">
-              <div className="kicker">Gestion de patrimoine</div>
-              <div className="card__title">Allocation & relation dédiée</div>
-              <p className="card__muted">
-                Stratégie d’allocation, diversification, garde, et suivi discret. Relation client prioritaire.
-              </p>
-              <div className="hr"></div>
-              <a href="/contact" className="btn btn--gold">Parler à un conseiller</a>
-            </article>
+      {/* ✅ CONTENU */}
+      <section>
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#3B3B47] text-center">
+          Nos Services
+        </h1>
+        <p className="mt-4 text-gray-600 md:text-lg leading-relaxed text-center">
+          Nous combinons investissement, technologie et expertise stratégique
+          pour créer de la valeur mesurable avec exigence et élégance.
+        </p>
 
-            <article className="card">
-              <div className="kicker">Capital à risque</div>
-              <div className="card__title">Thèses & due diligence</div>
-              <p className="card__muted">
-                Fintech, deeptech, SaaS : sélection, structuration, gouvernance & board. Tickets flexibles, co-invest.
-              </p>
-              <div className="hr"></div>
-              <a href="/contact" className="btn btn--ghost">Accéder au deal-flow</a>
-            </article>
+        {/* ✅ CARTES DE SERVICES */}
+        <div className="mt-12 grid md:grid-cols-2 gap-10">
+          {/* Carte 1 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg transition">
+            <h2 className="text-2xl font-medium text-[#3B3B47] mb-2">
+              Gestion de patrimoine
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Allocation & diversification, structuration d’actifs, optimisation
+              fiscale et transmission. Une approche sur-mesure pour faire croître
+              et protéger votre capital.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block mt-4 text-blue-700 font-medium hover:underline"
+            >
+              Discuter d’un projet →
+            </a>
+          </article>
 
-            <article className="card">
-              <div className="kicker">Conseil</div>
-              <div className="card__title">Stratégie & excellence</div>
-              <p className="card__muted">
-                Vision produit, pricing, M&A, data room, OKR. Exécution pragmatique et mesurable.
-              </p>
-              <div className="hr"></div>
-              <a href="/contact" className="btn btn--ghost">Planifier un échange</a>
-            </article>
-          </div>
+          {/* Carte 2 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg transition">
+            <h2 className="text-2xl font-medium text-[#3B3B47] mb-2">
+              Capital à risque
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Investissements early-stage, croissance, structuration des deals,
+              gouvernance et accompagnement stratégique.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block mt-4 text-blue-700 font-medium hover:underline"
+            >
+              Nous contacter →
+            </a>
+          </article>
+
+          {/* Carte 3 */}
+          <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg transition">
+            <h2 className="text-2xl font-medium text-[#3B3B47] mb-2">
+              Développement digital
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Produits web & mobiles, automatisation, intégrations cloud,
+              optimisation UX et plateformes sur-mesure.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block mt-4 text-blue-700 font-medium hover:underline"
+            >
+              Discuter technique →
+            </a>
+          </article>
         </div>
       </section>
     </main>
