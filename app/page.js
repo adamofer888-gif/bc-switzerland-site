@@ -1,45 +1,54 @@
 export default function Home() {
   return (
-    <main className="max-w-6xl mx-auto px-4">
-      {/* Hero */}
-      <section className="py-16">
-        <h1 className="text-4xl font-bold tracking-tight">DTE Holding AG</h1>
-        <p className="mt-3 text-lg text-gray-600">
-          Innovations • Capital à Risque • Développement Digital
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a href="/services" className="px-4 py-2 rounded-lg bg-blue-900 text-white">
-            Nos services
-          </a>
-          <a href="/contact" className="px-4 py-2 rounded-lg border">
-            Nous contacter
-          </a>
+    <main>
+      {/* HERO */}
+      <section className="hero section">
+        <div className="container hero__grid">
+          <div>
+            <div className="kicker">Asset & Wealth Management</div>
+            <h1 className="h1">Gestion de patrimoine & capital à risque — <span style={{color:"var(--gold)"}}>Suisse</span></h1>
+            <p className="lead">
+              Société basée à Wollerau depuis 2011. Nous unissons investissement, gouvernance et technologie
+              pour transformer les ambitions en résultats durables.
+            </p>
+            <div style={{display:"flex",gap:"12px",marginTop:"20px",flexWrap:"wrap"}}>
+              <a href="/services" className="btn btn--gold">Découvrir nos services</a>
+              <a href="/contact" className="btn btn--ghost">Nous contacter</a>
+            </div>
+            <div style={{marginTop:"18px"}} className="badge">
+              <span>CH-130.3.017.565-5</span> <span>•</span> <span>Wollerau, Suisse</span> <span>•</span> <span>Depuis 2011</span>
+            </div>
+          </div>
+          <div>
+            <div style={{aspectRatio:"4/3",borderRadius:"18px",border:"1px solid var(--stroke)",background:"url(https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop) center/cover"}} />
+            <div className="muted" style={{marginTop:8,fontSize:12}}>Crédits photo : Alpes suisses</div>
+          </div>
         </div>
       </section>
 
-      {/* Aperçu services */}
-      <section id="services" className="py-10 border-t">
-        <h2 className="text-2xl font-semibold">Nos Services</h2>
-
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border p-5">
-            <h3 className="font-medium">Capital à Risque</h3>
-            <p className="mt-2 text-sm text-gray-600">
-              Early-stage, structure de deals, gouvernance.
-            </p>
-            <a href="/services/capital-a-risque" className="mt-3 inline-block text-blue-700">
-              En savoir plus →
-            </a>
-          </div>
-
-          <div className="rounded-xl border p-5">
-            <h3 className="font-medium">Développement Digital</h3>
-            <p className="mt-2 text-sm text-gray-600">
-              Produits web & mobiles, optimisation UX, intégrations cloud.
-            </p>
+      {/* PILIERS */}
+      <section className="section">
+        <div className="container">
+          <h2 className="section__title">Nos piliers d’exécution</h2>
+          <div className="cards" style={{marginTop:18}}>
+            <article className="card">
+              <div className="kicker">01</div>
+              <div className="card__title">Gestion de patrimoine</div>
+              <p className="card__muted">Allocation disciplinée, contrôle des risques, relation client dédiée.</p>
+            </article>
+            <article className="card">
+              <div className="kicker">02</div>
+              <div className="card__title">Capital à risque</div>
+              <p className="card__muted">Thèses fintech / deeptech / SaaS, sélection, due diligence, gouvernance.</p>
+            </article>
+            <article className="card">
+              <div className="kicker">03</div>
+              <div className="card__title">Conseil stratégique</div>
+              <p className="card__muted">Vision produit, M&A, structuration, excellence opérationnelle.</p>
+            </article>
           </div>
         </div>
       </section>
     </main>
   );
-        }
+}
