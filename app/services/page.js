@@ -29,11 +29,12 @@ export default function ServicesPage() {
       {/* ✅ CARTES DE SERVICES */}
       <div className="mt-12 grid md:grid-cols-3 gap-8">
 
-        {/* --- GESTION DE PATRIMOINE --- */}
+        {/* ✅ GESTION DE PATRIMOINE */}
         <article className="bg-white/10 border border-white/20 backdrop-blur-xl p-6 rounded-2xl">
           <h2 className="text-2xl font-semibold text-white">Gestion de patrimoine</h2>
           <p className="mt-3 text-gray-300 text-sm leading-relaxed">
-            Allocation & diversification, structuration d’actifs, optimisation fiscale et transmission.
+            Allocation & diversification, structuration d’actifs,
+            optimisation fiscale et transmission.
             Une approche sur-mesure pour faire croître et protéger votre capital.
           </p>
           <a
@@ -44,11 +45,12 @@ export default function ServicesPage() {
           </a>
         </article>
 
-        {/* --- CAPITAL À RISQUE --- */}
+        {/* ✅ CAPITAL À RISQUE */}
         <article className="bg-white/10 border border-white/20 backdrop-blur-xl p-6 rounded-2xl">
           <h2 className="text-2xl font-semibold text-white">Capital à risque</h2>
           <p className="mt-3 text-gray-300 text-sm leading-relaxed">
-            Investissements early-stage, croissance, structuration des deals, gouvernance et accompagnement stratégique.
+            Investissements early-stage, croissance, structuration des deals,
+            gouvernance et accompagnement stratégique.
           </p>
           <a
             href="/contact"
@@ -58,11 +60,12 @@ export default function ServicesPage() {
           </a>
         </article>
 
-        {/* --- DÉVELOPPEMENT DIGITAL --- */}
+        {/* ✅ DÉVELOPPEMENT DIGITAL */}
         <article className="bg-white/10 border border-white/20 backdrop-blur-xl p-6 rounded-2xl">
           <h2 className="text-2xl font-semibold text-white">Développement digital</h2>
           <p className="mt-3 text-gray-300 text-sm leading-relaxed">
-            Produits web & mobiles, automatisation, intégrations cloud, optimisation UX et plateformes sur-mesure.
+            Produits web & mobiles, automatisation, intégrations cloud,
+            optimisation UX et plateformes sur-mesure.
           </p>
           <a
             href="/contact"
@@ -72,6 +75,7 @@ export default function ServicesPage() {
           </a>
         </article>
       </div>
+
     </main>
   );
 }
