@@ -1,86 +1,71 @@
-import "../globals.css";
-import Image from "next/image";
+import "./team.css";
 
 export const metadata = {
-  title: "Équipe – DTE Holding AG",
-  description:
-    "Découvrez l’équipe dirigeante de DTE Holding AG : expertise, rigueur suisse, stratégie et excellence opérationnelle.",
+  title: "Notre équipe - DTE Holding AG",
+  description: "Découvrez l'équipe dirigeante de DTE Holding AG."
 };
 
-export default function Team() {
+export default function TeamPage() {
   return (
-    <div className="fade-block">
-      {/* Hero image */}
-      <section className="hero">
-        <div className="hero__gradient"></div>
-        <Image
-          src="/hero.jpg"
-          alt="Alpes suisses"
-          fill
-          priority
-          className="hero__img"
-        />
-        <div className="container hero__grid">
-          <h1 className="h1">
-            Notre<br /> équipe dirigeante
-          </h1>
-          <p className="lead">
-            Des dirigeants expérimentés combinant vision stratégique, excellence
-            opérationnelle et gouvernance exigeante.
+    <main className="team-page">
+      <section className="team-hero fade-block">
+        <h1>Notre équipe</h1>
+        <p>
+          Des dirigeants expérimentés combinant vision stratégique,
+          excellence opérationnelle et gouvernance exigeante.
+        </p>
+      </section>
+
+      <section className="team-list fade-block">
+        <h2>Direction</h2>
+
+        <div className="member">
+          <h3>CEO — Daniel Thomas Eggenberger</h3>
+          <p>
+            Direction générale, vision long terme et gouvernance. Focalisé sur
+            la création de valeur durable via une allocation disciplinée du
+            capital et l’excellence d’exécution.
+          </p>
+        </div>
+
+        <div className="member">
+          <h3>COO — Navneet Patel</h3>
+          <p>
+            Opérations, processus et performance. Mise en place de systèmes
+            robustes, due diligence opérationnelle et pilotage de la croissance.
+          </p>
+        </div>
+
+        <div className="member">
+          <h3>CFO — Adam Ofer</h3>
+          <p>
+            Finance, contrôle des risques, structuration, reporting clair et
+            allocation optimale des ressources.
           </p>
         </div>
       </section>
 
-      {/* Section: Members */}
-      <section className="container">
-        <h2 className="title">Direction</h2>
+      <section className="values fade-block">
+        <h2>Nos valeurs</h2>
 
-        <div className="cards">
-          <div className="card fade-block">
-            <p className="card_title">Daniel Thomas Eggenberger – CEO</p>
-            <p>
-              Direction générale, vision long terme et gouvernance. Création de
-              valeur durable via allocation du capital, excellence et stratégie.
-            </p>
-          </div>
-
-          <div className="card fade-block">
-            <p className="card_title">Navneet Patel – COO</p>
-            <p>
-              Opérations, processus, automations et due diligence
-              opérationnelle. Pilotage de la croissance et performance.
-            </p>
-          </div>
-
-          <div className="card fade-block">
-            <p className="card_title">Adam Ofer – CFO</p>
-            <p>
-              Finance, contrôle des risques, structuration et gestion des
-              ressources. Reporting clair et transparence maximale.
-            </p>
-          </div>
+        <div className="value-card">
+          <span>01</span>
+          <h3>Rigueur & gouvernance</h3>
+          <p>Comités, processus, contrôle des risques et indépendance d’esprit.</p>
         </div>
 
-        <h2 className="title mt-12">Valeurs clés</h2>
+        <div className="value-card">
+          <span>02</span>
+          <h3>Création de valeur</h3>
+          <p>Focus ROI, impact durable, exécution mesurable.</p>
+        </div>
 
-        <div className="cards">
-          <div className="card fade-block">
-            <p className="card_title">Rigueur & gouvernance</p>
-            <p>Processus, comité, contrôle des risques et indépendance
-            d’esprit.</p>
-          </div>
-
-          <div className="card fade-block">
-            <p className="card_title">Orientation valeur</p>
-            <p>Focus ROI, impact durable et exécution mesurable.</p>
-          </div>
-
-          <div className="card fade-block">
-            <p className="card_title">Confidentialité suisse</p>
-            <p>Discrétion absolue, éthique et sécurité des informations.</p>
-          </div>
+        <div className="value-card">
+          <span>03</span>
+          <h3>Confidentialité</h3>
+          <p>Standards suisses, confidentialité absolue, éthique de haut niveau.</p>
         </div>
       </section>
-    </div>
+    </main>
   );
               }
