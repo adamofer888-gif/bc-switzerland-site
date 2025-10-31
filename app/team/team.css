@@ -1,35 +1,63 @@
-/* Team Page Styling */
+/* app/team/team.css */
 
-section, .container, h1, h2, h3, p {
-  color: var(--white) !important;
+/* Grilles valeurs */
+.grid-3 {
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-/* Cards */
-.team-card {
+/* “Pills” (principes) */
+.pill {
   background: var(--panel);
   border: 1px solid var(--stroke);
   border-radius: 18px;
   padding: 22px;
-  margin-bottom: 18px;
 }
-
-.team-card h3 {
-  font-size: clamp(18px, 3vw, 24px);
-  margin-bottom: 6px;
-  color: var(--white);
+.pill__index {
+  font-weight: 700;
+  color: var(--gold);
+  display: inline-block;
+  margin-bottom: 8px;
+  letter-spacing: .06em;
 }
-
-.team-card p {
-  font-size: .95rem;
+.pill__title {
+  font-weight: 600;
+  margin: 2px 0 6px;
+}
+.pill__text {
   color: var(--muted);
 }
 
-/* Values section */
-.value-item {
-  margin-bottom: 22px;
+/* CTA panel */
+.section--panel {
+  background: var(--panel);
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+.cta {
+  display: grid;
+  gap: 18px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .cta {
+    grid-template-columns: 1fr auto;
+  }
+}
+.cta__title {
+  font-size: clamp(18px, 2.2vw, 24px);
 }
 
-.value-item span {
-  color: var(--gold);
-  font-size: .9rem;
+/* Animations (réutilise ton fade-block existant) */
+.fade-block { opacity: 0; transform: translateY(18px); }
+.fade-block.fade-in { opacity: 1; transform: translateY(0); animation: fadeUp .7s ease forwards; }
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
