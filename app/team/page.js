@@ -7,11 +7,11 @@ export const metadata = {
 
 export default function Team() {
   return (
-    <section className="container">
-      
-      <div className="section fade-block">
+    <main className="container fade-block">
+
+      <section className="section">
         <p className="sub">NOTRE ÉQUIPE</p>
-        <h2 className="h1">Des dirigeants au service de l’excellence</h2>
+        <h1 className="h1">Des dirigeants au service de l’excellence</h1>
         <p className="lead">
           Vision stratégique, exécution opérationnelle, gouvernance exigeante.
           Une équipe dédiée à la création de valeur durable.
@@ -21,9 +21,9 @@ export default function Team() {
           <a className="btn gold" href="mailto:ceo@dteholdingag.com">Contacter le board →</a>
           <a className="btn" href="#principes">Nos principes</a>
         </div>
-      </div>
+      </section>
 
-      <div className="cards fade-block">
+      <section className="cards fade-block">
         <div className="card">
           <p className="card_title">Daniel Thomas Eggenberger — CEO</p>
           <p>Direction générale, vision long terme, allocation disciplinée du capital et excellence d’exécution.</p>
@@ -38,24 +38,26 @@ export default function Team() {
           <p className="card_title">Adam Ofer — CFO</p>
           <p>Finance, allocation optimale des ressources, contrôle des risques, reporting clair et rigoureux.</p>
         </div>
-      </div>
+      </section>
 
-      <div id="principes" className="section fade-block">
+      <section id="principes" className="section fade-block">
+        <h2 className="h2">Nos principes de direction</h2>
+
         <p className="sub">01</p>
-        <h3 className="h2">Rigueur & gouvernance</h3>
+        <h3>Rigueur & gouvernance</h3>
         <p>Comités, processus, contrôle des risques et indépendance d’esprit.</p>
 
         <p className="sub">02</p>
-        <h3 className="h2">Orientation valeur</h3>
+        <h3>Orientation valeur</h3>
         <p>Focus ROI, impact durable, exécution mesurable.</p>
 
         <p className="sub">03</p>
-        <h3 className="h2">Confidentialité</h3>
-        <p>Standards suisses, confidentialité absolue, éthique de haut niveau.</p>
+        <h3>Confidentialité</h3>
+        <p>Standards suisses, éthique, confidentialité absolue.</p>
 
         <a className="btn gold" href="mailto:ceo@dteholdingag.com">Échanger avec la direction →</a>
-      </div>
+      </section>
 
-    </section>
+    </main>
   );
-    }
+}
