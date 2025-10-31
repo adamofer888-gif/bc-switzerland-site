@@ -1,38 +1,30 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
-export default function FadeIn({ children, delay = 0 }) {
-  const ref = useRef(null);
-  const [shown, setShown] = useState(false);
-
+export default function FadeIn() {
   useEffect(() => {
-    if (!ref.current) return;
-    const el = ref.current;
+    const items = Array.from(document.querySelectorAll(".fade-block"));
+    if (!("IntersectionObserver" in window) || items.length === 0) {
+      items.forEach((el) => el.classList.add("fade-in"));
+      return;
+    }
 
-    const observer = new IntersectionObserver(
+    const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShown(true);
-            observer.unobserve(el);
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("fade-in");
+            io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.12 }
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.15 }
     );
 
-    observer.observe(el);
-    return () => observer.disconnect();
+    items.forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, []);
 
-  return (
-    <div
-      ref={ref}
-      style={{ animationDelay: `${delay}ms` }}
-      className={`fade-block ${shown ? "fade-in" : ""}`}
-    >
-      {children}
-    </div>
-  );
+  return null;
 }
