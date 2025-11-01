@@ -1,102 +1,84 @@
 // app/contact/page.js
+import "./contact.css";
 
 export const metadata = {
   title: "Contact — DTE Holding AG",
   description:
-    "Contactez DTE Holding AG à Wollerau (Suisse) pour toute demande d’information, de partenariat ou de projet.",
+    "Contactez DTE Holding AG à Wollerau (Suisse) : téléphone, email, adresse. Réponse rapide et confidentielle.",
 };
 
 export default function ContactPage() {
   return (
-    <main className="relative">
+    <main className="container" style={{ paddingTop: 24, paddingBottom: 48 }}>
       {/* HERO */}
-      <section aria-label="En-tête Contact" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/80 to-slate-900" />
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1506702315536-dd8b83e2dcf9?q=80&w=1600&auto=format&fit=crop')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        <div className="relative max-w-6xl mx-auto px-6 py-24">
-          <p className="text-sm uppercase tracking-[0.25em] text-slate-400">
-            Parlons de votre projet
+      <section className="contact-hero">
+        <div className="contact-hero__inner">
+          <p className="kicker">Nous contacter</p>
+          <h1 className="h1">Parlons de votre projet</h1>
+          <p className="lead" style={{ maxWidth: 720 }}>
+            Relation client exigeante, confidentialité suisse. Nous revenons vers vous
+            rapidement avec une première analyse concrète.
           </p>
-          <h1 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight text-white">
-            Contact
-          </h1>
-          <p className="mt-5 max-w-3xl text-slate-300 md:text-lg leading-relaxed">
-            Pour toute demande d’information, de partenariat ou de projet,
-            notre équipe vous répond rapidement.
-          </p>
+          <div className="actions" style={{ marginTop: 14, display: "flex", gap: 10 }}>
+            <a className="btn gold" href="tel:+41779569183">Appeler le +41 77 956 91 83</a>
+            <a className="btn" href="mailto:contact@dteholdingag.com">Écrire un email</a>
+          </div>
         </div>
       </section>
 
-      {/* COORDONNÉES + CTA */}
-      <section className="bg-slate-950">
-        <div className="max-w-6xl mx-auto px-6 -mt-10 md:-mt-14 relative">
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Adresse */}
-            <article className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6">
-              <div className="text-xs uppercase tracking-widest text-slate-400">Adresse</div>
-              <h3 className="mt-2 text-lg font-medium text-white">
-                Wyssenfluhstrasse 1
-                <br />
-                8832 Wollerau, Suisse
-              </h3>
+      {/* GRID CONTACT */}
+      <section className="contact-grid">
+        {/* Coordonnées */}
+        <article className="card">
+          <h3>Coordonnées directes</h3>
+          <div className="kv">
+            <div> Téléphone : <a href="tel:+41779569183">+41 77 956 91 83</a></div>
+            <div> Email général : <a href="mailto:contact@dteholdingag.com">contact@dteholdingag.com</a></div>
+            <div> Direction (CEO) : <a href="mailto:ceo@dteholdingag.com">ceo@dteholdingag.com</a></div>
+            <div> COO : <a href="mailto:n.patel@dteholdingag.com">n.patel@dteholdingag.com</a></div>
+            <div> CFO : <a href="mailto:a.ofer@dteholdingag.com">a.ofer@dteholdingag.com</a></div>
+          </div>
+
+          <div className="hr" style={{ margin: "14px 0" }} />
+
+          <h3>Adresse</h3>
+          <p>Wyssenfluhstrasse 1<br />8832 Wollerau — Suisse</p>
+          <div style={{ marginTop: 10 }}>
+            <a
+              className="btn"
+              href="https://maps.google.com/?q=Wyssenfluhstrasse+1+8832+Wollerau+Suisse"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ouvrir dans Google Maps
+            </a>
+          </div>
+        </article>
+
+        {/* Aperçu Map / CTA */}
+        <article className="card">
+          <h3>Localisation</h3>
+          <div className="map-preview" />
+          <div className="map-overlay">
+            <div className="map-overlay__content">
+              <p className="muted">Wyssenfluhstrasse 1, 8832 Wollerau</p>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Wyssenfluhstrasse+1%2C+8832+Wollerau%2C+Suisse"
+                className="btn gold"
+                href="https://maps.google.com/?q=Wyssenfluhstrasse+1+8832+Wollerau+Suisse"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 text-amber-300 hover:text-amber-200 font-medium"
               >
-                Ouvrir sur Google Maps →
+                Itinéraire →
               </a>
-            </article>
-
-            {/* Téléphone */}
-            <article className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6">
-              <div className="text-xs uppercase tracking-widest text-slate-400">Téléphone</div>
-              <h3 className="mt-2 text-lg font-medium text-white">+41 77 956 91 83</h3>
-              <a href="tel:+41779569183" className="inline-block mt-4 text-amber-300 hover:text-amber-200 font-medium">
-                Appeler →
-              </a>
-            </article>
-
-            {/* Email */}
-            <article className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6">
-              <div className="text-xs uppercase tracking-widest text-slate-400">Email</div>
-              <h3 className="mt-2 text-lg font-medium text-white">contact@dteholdingag.com</h3>
-              <a
-                href="mailto:contact@dteholdingag.com"
-                className="inline-block mt-4 text-amber-300 hover:text-amber-200 font-medium"
-              >
-                Écrire un email →
-              </a>
-            </article>
+            </div>
           </div>
-        </div>
+        </article>
       </section>
 
-      {/* MAP EMBED (pas d’API clé) */}
-      <section className="bg-slate-950">
-        <div className="max-w-6xl mx-auto px-6 mt-8">
-          <div className="rounded-2xl overflow-hidden border border-white/10">
-            <iframe
-              title="Localisation — DTE Holding AG"
-              src="https://www.google.com/maps?q=Wyssenfluhstrasse+1,+8832+Wollerau,+Suisse&output=embed&z=15"
-              width="100%"
-              height="420"
-              style={{ border: 0, display: "block" }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </section>
+      {/* Légal */}
+      <p className="legal-line">
+        DTE Holding AG · RC : CH-130.3.017.565-5 · Société établie en Suisse depuis 2011
+      </p>
     </main>
   );
-}
+              }
