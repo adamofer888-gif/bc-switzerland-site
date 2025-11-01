@@ -46,7 +46,7 @@ export default function Contact() {
 
           <img
             className="contact-map"
-            src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80"
+            src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80"
             alt="Localisation — Wollerau, Suisse"
           />
 
