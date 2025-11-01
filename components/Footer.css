@@ -1,0 +1,44 @@
+/* components/footer.css */
+.site-footer{
+  margin-top: 48px;
+  background: var(--panel);
+  border-top: 1px solid var(--stroke);
+  color: var(--white);
+  padding: 28px 0 18px;
+}
+.footer-grid{
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px){
+  .footer-grid{ grid-template-columns: 2fr 1fr 1fr; }
+}
+.brand{ font-weight: 700; letter-spacing: .01em; }
+.links, .contact{ display: grid; gap: 8px; }
+.links a, .contact a{ color: var(--muted); text-decoration: none; }
+.links a:hover, .contact a:hover{ text-decoration: underline; }
+
+.logos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.badge{
+  font-size: .85rem;
+  padding: 6px 10px;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+}
+
+.legal{
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--stroke);
+  text-align: center;
+  font-size: .85rem;
+  color: var(--muted);
+}
