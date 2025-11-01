@@ -45,10 +45,10 @@ export default function Contact() {
           <h2>Localisation</h2>
 
           <img
-            src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?q=80&w=1200"
-            alt="Location"
-            className="contact-map"
-          />
+  src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200"
+  alt="Localisation Wollerau"
+  className="contact-map"
+/>
 
           <h3>Adresse</h3>
           <p>Wyssenfluhstrasse 1<br />8832 Wollerau — Suisse</p>
