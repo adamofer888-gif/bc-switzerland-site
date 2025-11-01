@@ -9,7 +9,7 @@ export default function Contact() {
         <h1>Parlons de votre projet</h1>
         <p>
           Relation client exigeante, confidentialité suisse. Nous revenons vers vous
-          rapidement avec une première analyse concrète.
+          rapidement avec une analyse concrète et personnalisée.
         </p>
 
         <div className="contact-buttons">
@@ -45,10 +45,10 @@ export default function Contact() {
           <h2>Localisation</h2>
 
           <img
-  src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200"
-  alt="Localisation Wollerau"
-  className="contact-map"
-/>
+            className="contact-map"
+            src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80"
+            alt="Localisation — Wollerau, Suisse"
+          />
 
           <h3>Adresse</h3>
           <p>Wyssenfluhstrasse 1<br />8832 Wollerau — Suisse</p>
