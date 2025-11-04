@@ -30,6 +30,55 @@ export default function Navbar() {
           </Link>
         </nav>
       </div>
+      <style jsx>{`
+        .navbar {
+          width: 100%;
+          background: #0b0d16;
+          padding: 18px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid rgba(255,255,255,0.06);
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
+
+        .navbar-container {
+          width: 90%;
+          max-width: 1400px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .logo {
+          font-size: 18px;
+          font-weight: 900;
+          color: white;
+          line-height: 18px;
+          text-decoration: none;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 28px;
+          align-items: center;
+          font-size: 15px;
+        }
+
+        .nav-links a {
+          color: rgba(255,255,255,0.72);
+          text-decoration: none;
+          transition: 0.2s;
+        }
+
+        .nav-links a.active,
+        .nav-links a:hover {
+          color: #ffcf5a;
+          font-weight: 600;
+        }
+      `}</style>
     </header>
   );
 }
