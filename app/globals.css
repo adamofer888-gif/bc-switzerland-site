@@ -85,3 +85,76 @@ a{color:inherit;text-decoration:none}
   transform: translateY(0);
   animation: fadeUp 0.7s ease forwards;
 }
+/* --- STYLE PAGE À PROPOS --- */
+
+.page-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  color: #0d1b2a;
+  animation: fadein 0.6s ease-in-out;
+}
+
+.hero-apropos {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #0d1b2a, #1b263b);
+  color: white;
+  border-radius: 10px;
+}
+
+.hero-apropos h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-block {
+  margin-bottom: 45px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.text-block ul {
+  margin-left: 20px;
+  list-style: square;
+}
+
+.testimonials, .case-studies, .security {
+  margin-top: 60px;
+}
+
+.testimonials h2,
+.case-studies h2,
+.security h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.testimonial, .case {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #1b263b;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+}
+
+.testimonial p,
+.case p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.testimonial .source {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1b263b;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
