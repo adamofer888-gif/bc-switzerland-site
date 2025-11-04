@@ -1,0 +1,57 @@
+export const metadata = {
+  title: "À propos — DTE Holding AG",
+  description:
+    "Histoire, mission et principes de DTE Holding AG, société suisse basée à Wollerau.",
+};
+
+export default function Apropos() {
+  return (
+    <main className="container" style={{ paddingTop: 24, paddingBottom: 48 }}>
+      <section className="section">
+        <p className="sub">À PROPOS</p>
+        <h1 className="h1">Notre mission et notre exigence</h1>
+        <p className="lead" style={{ maxWidth: 820 }}>
+          DTE Holding AG est une société suisse dédiée à la gestion patrimoniale, aux investissements privés
+          et à la création de valeur durable. Notre approche repose sur la prudence, la transparence et l’exécution.
+        </p>
+      </section>
+
+      <section className="cards">
+        <article className="card">
+          <p className="card_title">Notre histoire</p>
+          <p>
+            Depuis 2011, nous accompagnons des investisseurs privés et institutionnels avec une
+            philosophie d’investissement disciplinée et des processus documentés.
+          </p>
+        </article>
+
+        <article className="card">
+          <p className="card_title">Notre méthode</p>
+          <p>
+            Analyse des objectifs, sélection rigoureuse des actifs, cadre de risque strict,
+            exécution suivie d’un reporting clair et mesurable.
+          </p>
+        </article>
+
+        <article className="card">
+          <p className="card_title">Nos engagements</p>
+          <p>
+            Confidentialité, alignement d’intérêts, indépendance de jugement et transparence
+            envers nos clients et partenaires.
+          </p>
+        </article>
+      </section>
+
+      <section className="section">
+        <h2 className="h2">Identité de la société</h2>
+        <p>
+          RC : CH-130.3.017.565-5 · Siège : Wyssenfluhstrasse 1, 8832 Wollerau (Suisse) · Depuis 2011.
+        </p>
+        <div className="actions" style={{ marginTop: 12 }}>
+          <a className="btn gold" href="/contact">Parler à un interlocuteur</a>
+          <a className="btn" href="/services">Voir nos services</a>
+        </div>
+      </section>
+    </main>
+  );
+}
