@@ -1,72 +1,49 @@
-import "./team.css";
-import ClientFade from "./ClientFade";
-
 export const metadata = {
   title: "Team - DTE Holding AG",
-  description: "Découvrez l’équipe dirigeante et nos principes d’exécution.",
+  description:
+    "Découvrez l’équipe dirigeante de DTE Holding AG, basée à Wollerau en Suisse.",
 };
 
 export default function Team() {
   return (
-    <main className="container">
-      <ClientFade>
-        <section className="section fade-block">
-          <p className="sub">NOTRE ÉQUIPE</p>
-          <h1 className="h1">Des dirigeants au service de l’excellence</h1>
-          <p className="lead">
-            Vision stratégique, exécution opérationnelle, gouvernance exigeante.
-            Une équipe dédiée à la création de valeur durable.
+    <div className="page-container">
+      <section className="hero-team">
+        <h1>Notre équipe</h1>
+        <p>
+          Une direction experte, structurée et dédiée à la performance de nos investisseurs.
+        </p>
+      </section>
+
+      <section className="team-list">
+
+        <div className="team-card">
+          <h2>Daniel Thomas Eggenberger</h2>
+          <h3>CEO – Fondateur</h3>
+          <p>
+            Entrepreneur suisse spécialisé dans la gestion patrimoniale et l’investissement.
+            Il supervise la stratégie globale, les relations institutionnelles et le développement de la société.
           </p>
-          <div className="actions">
-            <a className="btn gold" href="mailto:ceo@dteholdingag.com">Contacter le board →</a>
-            <a className="btn" href="#principes">Nos principes</a>
-          </div>
-        </section>
+        </div>
 
-        <section className="cards fade-block">
-          <div className="card">
-            <p className="card_title">Daniel Thomas Eggenberger — CEO</p>
-            <p>
-              Direction générale, vision long terme, allocation disciplinée du capital
-              et excellence d’exécution.
-            </p>
-          </div>
-          <div className="card">
-            <p className="card_title">Navneet Patel — COO</p>
-            <p>
-              Opérations, performance, systèmes robustes, due diligence opérationnelle
-              et pilotage de la croissance.
-            </p>
-          </div>
-          <div className="card">
-            <p className="card_title">Adam Ofer — CFO</p>
-            <p>
-              Finance, allocation optimale des ressources, contrôle des risques,
-              reporting clair et rigoureux.
-            </p>
-          </div>
-        </section>
+        <div className="team-card">
+          <h2>Navneet Patel</h2>
+          <h3>COO</h3>
+          <p>
+            Responsable des opérations, il pilote la conformité, la gestion interne
+            et la mise en œuvre des stratégies de développement.
+          </p>
+        </div>
 
-        <section id="principes" className="section fade-block">
-          <h2 className="h2">Nos principes de direction</h2>
+        <div className="team-card">
+          <h2>Adam Ofer</h2>
+          <h3>CFO</h3>
+          <p>
+            En charge de la finance et de la gestion des risques,
+            il structure les investissements et assure une croissance durable.
+          </p>
+        </div>
 
-          <p className="sub">01</p>
-          <h3>Rigueur & gouvernance</h3>
-          <p>Comités, processus, contrôle des risques et indépendance d’esprit.</p>
-
-          <p className="sub">02</p>
-          <h3>Orientation valeur</h3>
-          <p>Focus ROI, impact durable, exécution mesurable.</p>
-
-          <p className="sub">03</p>
-          <h3>Confidentialité</h3>
-          <p>Standards suisses, éthique, confidentialité absolue.</p>
-
-          <a className="btn gold" href="mailto:ceo@dteholdingag.com">
-            Échanger avec la direction →
-          </a>
-        </section>
-      </ClientFade>
-    </main>
+      </section>
+    </div>
   );
-                }
+}
