@@ -1,49 +1,54 @@
 export const metadata = {
-  title: "Team - DTE Holding AG",
+  title: "Team — DTE Holding AG",
   description:
-    "Découvrez l’équipe dirigeante de DTE Holding AG, basée à Wollerau en Suisse.",
+    "Direction et gouvernance — DTE Holding AG, Wollerau (Suisse).",
 };
 
 export default function Team() {
   return (
-    <div className="page-container">
-      <section className="hero-team">
-        <h1>Notre équipe</h1>
-        <p>
-          Une direction experte, structurée et dédiée à la performance de nos investisseurs.
+    <main className="container" style={{ paddingTop: 24, paddingBottom: 48 }}>
+      <section className="section">
+        <p className="sub">NOTRE ÉQUIPE</p>
+        <h1 className="h1">Des dirigeants au service de l’excellence</h1>
+        <p className="lead" style={{ maxWidth: 820 }}>
+          Vision stratégique, exécution opérationnelle et gouvernance exigeante.
+          Une équipe dédiée à la création de valeur durable.
         </p>
       </section>
 
-      <section className="team-list">
-
-        <div className="team-card">
-          <h2>Daniel Thomas Eggenberger</h2>
-          <h3>CEO – Fondateur</h3>
+      <section className="cards">
+        <article className="card">
+          <p className="card_title">Daniel Thomas Eggenberger — CEO</p>
           <p>
-            Entrepreneur suisse spécialisé dans la gestion patrimoniale et l’investissement.
-            Il supervise la stratégie globale, les relations institutionnelles et le développement de la société.
+            Stratégie globale, relations institutionnelles et allocation disciplinée du
+            capital. Supervision de la performance et de la création de valeur à long terme.
           </p>
-        </div>
+        </article>
 
-        <div className="team-card">
-          <h2>Navneet Patel</h2>
-          <h3>COO</h3>
+        <article className="card">
+          <p className="card_title">Navneet Patel — COO</p>
           <p>
-            Responsable des opérations, il pilote la conformité, la gestion interne
-            et la mise en œuvre des stratégies de développement.
+            Opérations, conformité et performance opérationnelle. Mise en œuvre des
+            processus et pilotage de la croissance.
           </p>
-        </div>
+        </article>
 
-        <div className="team-card">
-          <h2>Adam Ofer</h2>
-          <h3>CFO</h3>
+        <article className="card">
+          <p className="card_title">Adam Ofer — CFO</p>
           <p>
-            En charge de la finance et de la gestion des risques,
-            il structure les investissements et assure une croissance durable.
+            Finance, contrôle des risques et structuration des investissements. Reporting
+            clair et gouvernance financière rigoureuse.
           </p>
-        </div>
-
+        </article>
       </section>
-    </div>
+
+      <section className="section">
+        <h2 className="h2">Principes de direction</h2>
+        <p>
+          Rigueur & gouvernance · Orientation valeur · Confidentialité · Transparence
+          dans l’exécution et le reporting.
+        </p>
+      </section>
+    </main>
   );
-}
+              }
