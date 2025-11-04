@@ -1,16 +1,35 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
-    <header className="nav">
-      <nav className="container nav__inner">
-        <Link href="/" className="brand">DTE Holding AG</Link>
-        <div className="nav__links">
-          <Link href="/services" className="nav__link">Services</Link>
-          <Link href="/team" className="nav__link">Team</Link>
-          <Link href="/contact" className="btn btn--gold">Contact</Link>
-        </div>
-      </nav>
+    <header className="navbar">
+      <div className="navbar-container">
+        <Link href="/" className="logo">
+          DTE<br />Holding AG
+        </Link>
+
+        <nav className="nav-links">
+          <Link href="/" className={pathname === "/" ? "active" : ""}>
+            Accueil
+          </Link>
+          <Link href="/services" className={pathname === "/services" ? "active" : ""}>
+            Services
+          </Link>
+          <Link href="/team" className={pathname === "/team" ? "active" : ""}>
+            Team
+          </Link>
+          <Link href="/a-propos" className={pathname === "/a-propos" ? "active" : ""}>
+            À propos
+          </Link>
+          <Link href="/contact" className={pathname === "/contact" ? "active" : ""}>
+            Contact
+          </Link>
+        </nav>
+      </div>
     </header>
   );
 }
