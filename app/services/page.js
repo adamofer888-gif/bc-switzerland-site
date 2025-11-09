@@ -1,57 +1,80 @@
+// app/services/page.js
+import "./services.css";
+
 export const metadata = {
   title: "Services — DTE Holding AG",
   description:
-    "Gestion de patrimoine, capital à risque et solutions financières sur mesure.",
+    "Gestion patrimoniale, capital privé et stratégie financière. Processus discipliné, gouvernance suisse et contrôle du risque.",
 };
 
 export default function Services() {
   return (
-    <main className="container" style={{ paddingTop: 24, paddingBottom: 48 }}>
-      <section className="section">
-        <p className="sub">NOS EXPERTISES</p>
-        <h1 className="h1">Services conçus pour créer de la valeur</h1>
-        <p className="lead" style={{ maxWidth: 820 }}>
-          Une approche suisse fondée sur la rigueur, la confidentialité et l’exécution
-          mesurable. Des solutions adaptées à chaque profil d’investisseur.
-        </p>
+    <main className="services-page">
+
+      {/* HERO */}
+      <section className="sv-hero">
+        <div className="sv-hero__inner">
+          <span className="eyebrow">Expertises</span>
+          <h1>Nos services</h1>
+          <p className="lead">
+            Nous accompagnons nos clients dans la gestion de capital, l’allocation d’actifs
+            et la structuration stratégique. Le tout avec transparence, discipline
+            et confidentialité suisse.
+          </p>
+        </div>
       </section>
 
-      <section className="cards">
-        <article className="card">
-          <p className="card_title">Gestion de patrimoine</p>
-          <p>
-            Construction et optimisation de portefeuilles, allocation disciplinée
-            du capital, cadre de risque strict, suivi et reporting transparents.
-          </p>
-          <a className="btn gold" href="mailto:contact@dteholdingag.com">Nous consulter →</a>
-        </article>
+      {/* 3 DOMAINES */}
+      <section className="sv-section">
+        <h2>Domaines de compétence</h2>
+        <div className="sv-cards">
 
-        <article className="card">
-          <p className="card_title">Capital à risque</p>
-          <p>
-            Sélection d’opportunités à fort potentiel, due diligence approfondie,
-            structuration et accompagnement des participations dans la durée.
-          </p>
-          <a className="btn" href="mailto:contact@dteholdingag.com">Parler à un expert</a>
-        </article>
+          <article className="sv-card">
+            <h3>Gestion Patrimoniale</h3>
+            <p>
+              Allocation d’actifs disciplinée, analyse du risque, contrôle de la liquidité et reporting clair.
+              Objectif : préserver, optimiser et sécuriser votre capital sur le long terme.
+            </p>
+          </article>
 
-        <article className="card">
-          <p className="card_title">Finance & stratégie</p>
-          <p>
-            Structuration financière, financement, optimisation opérationnelle
-            et accompagnement des dirigeants pour une croissance durable.
-          </p>
-          <a className="btn" href="/contact">Prendre contact</a>
-        </article>
+          <article className="sv-card">
+            <h3>Capital Privé</h3>
+            <p>
+              Sélection d’opportunités rigoureuses, analyse fondamentale, structuration et suivi d’exécution.
+              Approche sélective orientée création de valeur réelle.
+            </p>
+          </article>
+
+          <article className="sv-card">
+            <h3>Stratégie Financière</h3>
+            <p>
+              Conseil sur mesure : structuration patrimoniale, gestion des risques, scénarios, gouvernance
+              et continuité financière.
+            </p>
+          </article>
+
+        </div>
       </section>
 
-      <section className="section">
-        <h2 className="h2">Notre méthode</h2>
-        <p>
-          1) Analyse des objectifs · 2) Sélection des actifs · 3) Cadre de risque ·
-          4) Exécution · 5) Contrôle et amélioration continue.
-        </p>
+      {/* AVANTAGES */}
+      <section className="sv-section sv-section--alt">
+        <h2>Pourquoi DTE Holding AG ?</h2>
+        <ul className="sv-list">
+          <li>Juridiction suisse · confidentialité & gouvernance</li>
+          <li>Processus documentés et décisions traçables</li>
+          <li>Suivi, reporting et transparence des opérations</li>
+          <li>Exécution disciplinée & gestion du risque</li>
+          <li>Approche indépendante et orientée résultats</li>
+        </ul>
       </section>
+
+      {/* CTA */}
+      <section className="sv-cta">
+        <h3>Discuter d’un projet ou d’un portefeuille</h3>
+        <p>Premier contact confidentiel avec la direction.</p>
+        <a href="/contact" className="btn btn--gold">Contact →</a>
+      </section>
+
     </main>
   );
-              }
+        }
