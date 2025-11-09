@@ -1,93 +1,153 @@
-import "../globals.css";
+// app/apropos/page.js
+import "./apropos.css";
 
 export const metadata = {
-  title: "À Propos - DTE Holding AG",
-  description: "Découvrez l'identité, les valeurs et l'expérience de DTE Holding AG, société suisse spécialisée en gestion de patrimoine, structuration d’actifs et capital-risque.",
+  title: "À propos — DTE Holding AG",
+  description:
+    "Société suisse à Wollerau depuis 2011. Gestion patrimoniale, capital privé et stratégie financière avec gouvernance et confidentialité suisses.",
 };
 
-export default function APropos() {
+export default function Apropos() {
   return (
-    <main className="page-container fade-in">
-      {/* TITRE */}
-      <header className="hero-apropos">
-        <h1>À PROPOS DE DTE HOLDING AG</h1>
-        <p>D’exécution. De précision. De résultats.</p>
-      </header>
+    <main className="apropos-page">
 
-      {/* SECTION : PRÉSENTATION */}
-      <section className="text-block">
-        <h2>Notre Identité</h2>
-        <p>
-          DTE Holding AG est une société suisse basée à Wollerau, spécialisée dans la gestion de patrimoine, 
-          la structuration d’actifs, le financement privé et l'accompagnement stratégique pour entreprises et investisseurs.
-        </p>
-        <p>
-          Notre objectif est simple : fournir un accompagnement clair, efficace et sécurisé avec l’exigence suisse en matière
-          d’exécution, de confidentialité et de gouvernance.
-        </p>
+      {/* HERO sobre & premium */}
+      <section className="ap-hero">
+        <div className="ap-hero__inner">
+          <div className="ap-hero__title">
+            <span className="eyebrow">DTE HOLDING AG</span>
+            <h1>À propos</h1>
+            <p className="lead">
+              Société suisse indépendante basée à Wollerau. Nous combinons discipline d’investissement,
+              contrôle du risque et exécution mesurable pour créer de la valeur durable.
+            </p>
+            <div className="ap-hero__ctas">
+              <a href="/services" className="btn btn--ghost">Voir nos expertises</a>
+              <a href="/contact" className="btn btn--gold">Contact confidentiel</a>
+            </div>
+          </div>
+
+          <ul className="ap-hero__bullets">
+            <li>Fondée en 2011 – Canton de Schwyz (Suisse)</li>
+            <li>Gestion patrimoniale, private capital & stratégie</li>
+            <li>Processus documentés, reporting clair, confidentialité</li>
+          </ul>
+        </div>
       </section>
 
-      {/* SECTION : VALEURS */}
-      <section className="text-block">
-        <h2>Nos Valeurs</h2>
-        <ul>
-          <li>Confidentialité & juridiction suisse</li>
-          <li>Transparence et gouvernance</li>
-          <li>Solutions sur mesure, sans intermédiaires inutiles</li>
-          <li>Exécution rapide et structurée</li>
+      {/* BANDEAU CREDIBILITÉ */}
+      <section className="ap-cred">
+        <div className="ap-cred__wrap">
+          <div className="ap-cred__item">
+            <div className="kpi">2011</div>
+            <div className="kpiLabel">Depuis</div>
+          </div>
+          <div className="ap-cred__item">
+            <div className="kpi">Wollerau (CH)</div>
+            <div className="kpiLabel">Siège social</div>
+          </div>
+          <div className="ap-cred__item">
+            <div className="kpi">CH-130.3.017.565-5</div>
+            <div className="kpiLabel">Registre du Commerce</div>
+          </div>
+          <div className="ap-cred__item">
+            <div className="kpi">Gouvernance</div>
+            <div className="kpiLabel">Process & conformité</div>
+          </div>
+        </div>
+      </section>
+
+      {/* NOS PILIERS */}
+      <section className="ap-section">
+        <h2>Nos piliers</h2>
+        <div className="ap-cards">
+          <article className="ap-card">
+            <h3>Discipline & traçabilité</h3>
+            <p>
+              Allocation rigoureuse, critères d’entrée/sortie, scénarios de stress et
+              documentation à chaque décision d’investissement.
+            </p>
+          </article>
+          <article className="ap-card">
+            <h3>Gestion du risque</h3>
+            <p>
+              Approche défensive par défaut, diversification pragmatique, contrôle de la liquidité
+              et revues périodiques des expositions.
+            </p>
+          </article>
+          <article className="ap-card">
+            <h3>Confidentialité suisse</h3>
+            <p>
+              Accès restreint, échange sécurisé, conservation limitée des données. Relation privée
+              et discrète avec la direction.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* NOTRE MÉTHODE (4 étapes) */}
+      <section className="ap-section ap-section--alt">
+        <h2>Notre méthode</h2>
+        <div className="ap-steps">
+          <div className="step">
+            <span className="stepNo">01</span>
+            <h4>Analyse</h4>
+            <p>Objectifs, contraintes, horizon, profil de risque, indicateurs de performance.</p>
+          </div>
+          <div className="step">
+            <span className="stepNo">02</span>
+            <h4>Sélection</h4>
+            <p>Allocation disciplinée, due diligence, scénarios et critères d’arbitrage.</p>
+          </div>
+          <div className="step">
+            <span className="stepNo">03</span>
+            <h4>Exécution</h4>
+            <p>Gouvernance, conformité, traçabilité et contrôle opérationnel.</p>
+          </div>
+          <div className="step">
+            <span className="stepNo">04</span>
+            <h4>Suivi</h4>
+            <p>Monitoring, reporting clair et améliorations continues documentées.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* DIRECTION (sans photos) */}
+      <section className="ap-section">
+        <h2>Direction</h2>
+        <ul className="ap-lead">
+          <li>
+            <strong>DANIEL THOMAS EGGENBERGER</strong> — CEO
+            <span> · Relation investisseurs, stratégie et supervision d’exécution.</span>
+          </li>
+          <li>
+            <strong>NAVNEET PATEL</strong> — COO
+            <span> · Opérations, process & contrôle interne.</span>
+          </li>
+          <li>
+            <strong>ADAM OFER</strong> — CFO
+            <span> · Ingénierie financière, structuration & reporting.</span>
+          </li>
         </ul>
       </section>
 
-      {/* SECTION : TÉMOIGNAGES */}
-      <section className="testimonials">
-        <h2>Témoignages de nos clients</h2>
-
-        <div className="testimonial">
-          <p>« DTE Holding AG nous a accompagné dans la structuration patrimoniale de notre groupe hôtelier. Processus clair, confidentiel et exécuté avec rigueur suisse. »</p>
-          <span className="source">Client – Secteur Hôtellerie, Suisse Romande</span>
-        </div>
-
-        <div className="testimonial">
-          <p>« Nous avons pu diversifier nos actifs vers des placements à rendement contrôlé avec une protection du capital. Service professionnel et discret. »</p>
-          <span className="source">Client Privé – Europe</span>
-        </div>
-
-        <div className="testimonial">
-          <p>« Pour un projet fintech, DTE Holding AG a coordonné les partenaires financiers, juridiques et stratégiques. Financement obtenu et exécution rapide. »</p>
-          <span className="source">Projet Capital-Risque – Technologie – Europe</span>
-        </div>
-      </section>
-
-      {/* SECTION : ÉTUDES DE CAS */}
-      <section className="case-studies">
-        <h2>Études de cas</h2>
-
-        <div className="case">
-          <h3>Gestion de portefeuille familial – Suisse</h3>
-          <p>Optimisation, diversification et protection du capital, exécution sous juridiction suisse, reporting trimestriel.</p>
-        </div>
-
-        <div className="case">
-          <h3>Capital-risque – Fintech européenne</h3>
-          <p>Structuration, gouvernance, due diligence et levée de fonds jusqu’à l’exécution.</p>
-        </div>
-
-        <div className="case">
-          <h3>Patrimoine immobilier international</h3>
-          <p>Acquisition, structuration fiscale optimisée, financement privé et gestion via entité suisse.</p>
-        </div>
-      </section>
-
-      {/* SECTION : SÉCURITÉ */}
-      <section className="security">
-        <h2>Conformité & Sécurité</h2>
-        <ul>
-          <li>Confidentialité Suisse – données protégées sous juridiction suisse</li>
-          <li>Procédures KYC / AML strictes</li>
-          <li>Contrôle interne des risques</li>
-          <li>Partenaires bancaires et institutionnels suisses</li>
+      {/* CONFORMITÉ & SÉCURITÉ */}
+      <section className="ap-section ap-section--alt">
+        <h2>Conformité & sécurité</h2>
+        <ul className="ap-list">
+          <li>Procédures KYC/AML appliquées à l’onboarding et aux opérations sensibles.</li>
+          <li>Contrôle des accès, chiffrement des échanges et conservation limitée des données.</li>
+          <li>Processus internes documentés : gouvernance, contrôle du risque, auditabilité.</li>
+          <li>Exécution en juridiction suisse avec partenaires établis.</li>
         </ul>
+      </section>
+
+      {/* CTA FINAL */}
+      <section className="ap-cta">
+        <h3>Échanger avec la direction</h3>
+        <p>Premier contact confidentiel et réponse rapide.</p>
+        <a className="btn btn--gold" href="/contact">Contacter DTE →</a>
       </section>
     </main>
   );
-        }
+    }
