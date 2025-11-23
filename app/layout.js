@@ -4,9 +4,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 
 export const metadata = {
-  title: "DTE Holding AG — Wealth Management & Capital à Risque",
+  title: "BC Switzerland – Investment & Holding Company",
   description:
-    "Société suisse de gestion de patrimoine, capital à risque et investissements alternatifs — Wollerau, Suisse.",
+    "BC Switzerland est une société suisse spécialisée dans l’investissement, la gestion d’actifs et les solutions financières premium pour entreprises et investisseurs privés.",
 };
 
 export default function RootLayout({ children }) {
