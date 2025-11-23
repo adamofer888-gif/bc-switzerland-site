@@ -1,126 +1,257 @@
-.home {
-  background: #05070a;
-  color: #ffffff;
+/* app/home.css – design premium BC Switzerland */
+
+:root {
+  --bg: #05070b;
+  --bg-alt: #0d1118;
+  --panel: #10151a;
+  --panel-alt: #121823;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #e8ebef;
+  --muted: #9ba5b0;
+  --gold: #c9a54d;
+}
+
+.home-page {
+  background: radial-gradient(circle at top, #1a2130 0, #05070b 45%, #020308 100%);
+  color: var(--text);
 }
 
 /* HERO */
 
 .home-hero {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  padding: 80px 20px;
-  background: radial-gradient(circle at top left, #1a2130, #05070a);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(900px 380px at 0% 0%, rgba(201,165,77,0.18), transparent),
+    linear-gradient(180deg, #090d12, #05070b);
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(5,7,10,1));
-}
-
-.hero-content {
-  position: relative;
-  max-width: 800px;
+.home-hero-inner {
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 70px 20px 60px;
 }
 
-.hero-label {
-  display: inline-block;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: #f4d27b;
+.home-eyebrow {
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .home-hero h1 {
-  font-size: 42px;
+  font-size: 34px;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin: 6px 0 14px;
+  font-weight: 800;
 }
 
-.home-hero p {
-  font-size: 17px;
-  color: #cfd5e2;
-  line-height: 1.6;
+.home-lead {
+  max-width: 720px;
+  color: #b9c2cc;
+  font-size: 15px;
 }
 
-/* INTRO */
-
-.home-intro {
-  max-width: 900px;
-  margin: 80px auto;
-  text-align: center;
-  padding: 0 20px;
+.home-cta-row {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.home-intro h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+/* BOUTONS */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.home-intro p {
-  color: #bfc6d4;
-  line-height: 1.7;
+.btn-primary {
+  background: var(--gold);
+  color: #05070b;
+  border: none;
 }
 
-/* EXPERTISE */
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
 
-.home-expertise {
-  padding: 60px 20px;
+.btn-secondary {
+  border: 1px solid var(--line);
+  color: var(--text);
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* SECTIONS GÉNÉRALES */
+
+.home-section {
+  padding: 40px 20px 32px;
+}
+
+.home-section-inner {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.home-expertise h2 {
-  text-align: center;
-  margin-bottom: 40px;
+.home-section h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
 }
 
-.expertise-grid {
+.home-section-text {
+  margin: 4px 0 16px;
+  color: var(--muted);
+}
+
+/* POURQUOI NOUS FAIRE CONFIANCE */
+
+.home-trust {
+  background: #0a0f14;
+  border-bottom: 1px solid var(--line);
+}
+
+.trust-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
 }
 
-.expertise-card {
-  background: linear-gradient(160deg, #0d121a, #070a0f);
-  border: 1px solid rgba(255,255,255,0.05);
+.trust-card {
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 60%),
+    var(--panel);
   border-radius: 18px;
-  padding: 24px;
-  transition: transform 0.3s ease;
+  border: 1px solid var(--line);
+  padding: 18px 16px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5);
 }
 
-.expertise-card:hover {
-  transform: translateY(-6px);
+.trust-card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
 }
 
-.expertise-card h3 {
-  color: #f4d27b;
-  margin-bottom: 10px;
-}
-
-.expertise-card p {
-  color: #c6cedd;
+.trust-card p {
+  margin: 0;
+  color: #c4ccd7;
+  font-size: 14px;
   line-height: 1.6;
 }
 
-/* CONFIDENCE */
+/* METHODOLOGIE */
 
-.home-confidence {
-  text-align: center;
-  padding: 70px 20px;
-  background: radial-gradient(circle at bottom, #141a24, #05070a);
+.home-method {
+  background: #05070b;
 }
 
-.home-confidence h2 {
-  margin-bottom: 15px;
+.method-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
 }
 
-.home-confidence p {
-  color: #bfc6d4;
-  max-width: 700px;
-  margin: auto;
+.method-step {
+  background: var(--panel-alt);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  padding: 16px 14px;
+}
+
+.step-number {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.method-step h3 {
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.method-step p {
+  margin: 0;
+  color: #c4ccd7;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ENGAGEMENTS */
+
+.home-commitments {
+  background: #0b0f16;
+  border-top: 1px solid var(--line);
+}
+
+.commit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.commit-item {
+  background: var(--panel);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  padding: 16px 14px;
+}
+
+.commit-item h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.commit-item p {
+  margin: 0;
+  color: #cfd6e0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .method-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .commit-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-hero-inner {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .method-steps,
+  .commit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero h1 {
+    font-size: 26px;
+  }
 }
