@@ -1,87 +1,190 @@
+/* app/equipe/equipe.css – design premium équipe */
+
 :root {
-  --bg: #0e1114;
-  --card: #10151a;
-  --border: rgba(255,255,255,0.08);
+  --panel: #10151a;
+  --panelAlt: #0f1318;
+  --line: rgba(255,255,255,0.08);
   --text: #e8ebef;
-  --muted: #a0a8b0;
+  --muted: #9ba5b0;
   --gold: #c9a54d;
 }
 
 .equipe-page {
-  background: var(--bg);
   color: var(--text);
 }
 
+/* HERO */
+
 .eq-hero {
-  padding: 60px 20px;
-  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(900px 380px at 0% 0%, rgba(201,165,77,0.18), transparent),
+    #0e1114;
+  border-bottom: 1px solid var(--line);
 }
 
 .eq-hero-inner {
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 52px 20px 40px;
 }
 
-.eq-hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.eq-hero-inner h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 10px 0 8px;
 }
 
-.eq-hero p {
-  color: var(--muted);
-  font-size: 16px;
+.lead {
+  color: #b9c2cc;
+  max-width: 820px;
 }
+
+/* SECTIONS GÉNÉRALES */
 
 .eq-section {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 30px 20px 28px;
 }
+
+.eq-section h2 {
+  font-size: 22px;
+  margin: 0 0 14px;
+}
+
+.eq-section-alt {
+  background: #0e1217;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* GRID DIRIGEANTS */
 
 .eq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
 }
 
 .eq-card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 60%),
+    var(--panel);
   border-radius: 18px;
-  padding: 22px;
-  transition: transform .3s ease;
+  border: 1px solid var(--line);
+  padding: 18px 16px 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
 }
 
-.eq-card:hover {
-  transform: translateY(-6px);
+.eq-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
-.initials {
-  width: 48px;
-  height: 48px;
-  background: var(--gold);
-  color: #000;
-  font-weight: bold;
-  border-radius: 50%;
+.eq-initials {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 20% 0, #f4d27b, #c9a54d);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  color: #05070a;
+  font-weight: 700;
+  font-size: 16px;
 }
 
-.eq-card h3 {
-  margin: 5px 0;
-  font-size: 18px;
+.eq-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.eq-card strong {
+.eq-role {
+  margin: 2px 0 0;
+  font-size: 13px;
   color: var(--gold);
-  font-size: 14px;
 }
 
-.eq-card p {
+.eq-email {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #d9c185;
+}
+
+.eq-email::before {
+  content: "✉ ";
+  font-size: 11px;
+}
+
+.eq-bio {
+  margin: 8px 0 0;
+  color: #c4ccd7;
   font-size: 14px;
-  color: var(--muted);
-  margin-top: 8px;
   line-height: 1.6;
+}
+
+/* LISTE PRINCIPES */
+
+.eq-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.eq-list li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: #cfd6e0;
+}
+
+/* CTA FINAL */
+
+.eq-cta {
+  max-width: 820px;
+  margin: 26px auto 46px;
+  text-align: center;
+  padding: 22px 20px;
+  background:
+    radial-gradient(circle at top, rgba(201,165,77,0.12), transparent 60%),
+    var(--panelAlt);
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.6);
+}
+
+.eq-cta h3 {
+  margin: 0 0 6px;
+}
+
+.eq-cta p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.eq-btn {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #05070a;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+}
+
+.eq-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .eq-grid {
+    grid-template-columns: 1fr;
+  }
 }
