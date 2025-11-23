@@ -1,55 +1,117 @@
 import "./equipe.css";
 
 export const metadata = {
-  title: "Équipe - BC Switzerland GmbH",
-  description: "Découvrez l’équipe dirigeante de BC Switzerland GmbH.",
+  title: "Équipe dirigeante – BC Switzerland GmbH",
+  description:
+    "Direction de BC Switzerland GmbH : une équipe resserrée et impliquée, avec une approche suisse structurée.",
 };
 
 export default function EquipePage() {
   return (
-    <section className="team-page">
-      
+    <main className="equipe-page">
       {/* HERO */}
-      <div className="team-hero">
-        <div className="team-hero-inner">
-          <span className="eyebrow">Notre direction</span>
+      <section className="eq-hero">
+        <div className="eq-hero-inner">
+          <span className="eyebrow">Équipe & direction</span>
           <h1>Équipe dirigeante</h1>
           <p className="lead">
-            Une gouvernance structurée et expérimentée au service de la performance, 
-            de la transparence et de la confiance de nos partenaires.
+            Une gouvernance resserrée, directement impliquée dans les mandats et guidée
+            par la clarté, la confidentialité et l’exigence d’exécution.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* TEAM GRID */}
-      <div className="team-container">
+      {/* GRID DES DIRIGEANTS */}
+      <section className="eq-section">
+        <div className="eq-grid">
 
-        <div className="team-member">
-          <h3>Teresa Marie Vermillion</h3>
-          <p className="role">Chief Executive Officer (CEO)</p>
-          <p className="member-email">teresa@bc-switzerland.ch</p>
+          <article className="eq-card">
+            <div className="eq-header">
+              <div className="eq-initials">TV</div>
+              <div>
+                <h3 className="eq-name">Teresa Marie Vermillion</h3>
+                <p className="eq-role">Chief Executive Officer (CEO)</p>
+                <p className="eq-email">teresa@bc-switzerland.ch</p>
+              </div>
+            </div>
+            <p className="eq-bio">
+              Direction générale et pilotage de la stratégie globale. Supervision des décisions
+              majeures, relation avec les principales parties prenantes et définition des priorités
+              à moyen et long terme.
+            </p>
+          </article>
+
+          <article className="eq-card">
+            <div className="eq-header">
+              <div className="eq-initials">NP</div>
+              <div>
+                <h3 className="eq-name">Navneet Patel</h3>
+                <p className="eq-role">Chief Operating Officer (COO)</p>
+                <p className="eq-email">n.patel@bc-switzerland.ch</p>
+              </div>
+            </div>
+            <p className="eq-bio">
+              Responsable de l’exécution opérationnelle, de la coordination des dossiers et du suivi
+              des process internes. Veille à ce que chaque mandat soit traité avec rigueur et
+              continuité.
+            </p>
+          </article>
+
+          <article className="eq-card">
+            <div className="eq-header">
+              <div className="eq-initials">AO</div>
+              <div>
+                <h3 className="eq-name">Adam Ofer</h3>
+                <p className="eq-role">Chief Financial Officer (CFO)</p>
+                <p className="eq-email">a.ofer@bc-switzerland.ch</p>
+              </div>
+            </div>
+            <p className="eq-bio">
+              Supervision financière, structuration des flux, modèles et reporting. Focus sur la
+              cohérence économique, la lisibilité des chiffres et la maîtrise du risque.
+            </p>
+          </article>
+
+          <article className="eq-card">
+            <div className="eq-header">
+              <div className="eq-initials">SM</div>
+              <div>
+                <h3 className="eq-name">Simon Mulliez</h3>
+                <p className="eq-role">Chief Technology Officer (CTO)</p>
+                <p className="eq-email">s.mulliez@bc-switzerland.ch</p>
+              </div>
+            </div>
+            <p className="eq-bio">
+              Encadrement des aspects technologiques, des outils et de la sécurité de l’information,
+              afin de soutenir une organisation moderne, fiable et sécurisée.
+            </p>
+          </article>
+
         </div>
+      </section>
 
-        <div className="team-member">
-          <h3>Navneet Patel</h3>
-          <p className="role">Chief Operating Officer (COO)</p>
-          <p className="member-email">n.patel@bc-switzerland.ch</p>
-        </div>
+      {/* PRINCIPES */}
+      <section className="eq-section eq-section-alt">
+        <h2>Principes de direction</h2>
+        <ul className="eq-list">
+          <li>Implication directe des dirigeants sur les dossiers sensibles.</li>
+          <li>Communication structurée, documentée et orientée décisions.</li>
+          <li>Confidentialité stricte et respect des cadres suisses et internationaux.</li>
+          <li>Vision long terme, avec un suivi dans la durée des relations.</li>
+        </ul>
+      </section>
 
-        <div className="team-member">
-          <h3>Adam Ofer</h3>
-          <p className="role">Chief Financial Officer (CFO)</p>
-          <p className="member-email">a.ofer@bc-switzerland.ch</p>
-        </div>
-
-        <div className="team-member">
-          <h3>Simon Mulliez</h3>
-          <p className="role">Chief Technology Officer (CTO)</p>
-          <p className="member-email">s.mulliez@bc-switzerland.ch</p>
-        </div>
-
-      </div>
-
-    </section>
+      {/* CTA */}
+      <section className="eq-cta">
+        <h3>Échanger avec la direction</h3>
+        <p>
+          Pour toute demande sérieuse liée à un projet, une structuration ou une collaboration,
+          un échange peut être organisé avec les membres de la direction.
+        </p>
+        <a href="/contact" className="eq-btn">
+          Contacter BC Switzerland →
+        </a>
+      </section>
+    </main>
   );
-}
+                }
