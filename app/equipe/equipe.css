@@ -1,0 +1,153 @@
+/* app/equipe/equipe.css */
+
+:root {
+  --panel: #10151a;
+  --panelAlt: #0f1318;
+  --line: rgba(255,255,255,0.08);
+  --text: #e8ebef;
+  --muted: #9ba5b0;
+  --gold: #c9a54d;
+}
+
+.equipe-page {
+  color: var(--text);
+}
+
+/* HERO */
+
+.eq-hero {
+  background:
+    radial-gradient(1000px 360px at 10% -10%, rgba(201,165,77,0.10), transparent),
+    #0e1114;
+  border-bottom: 1px solid var(--line);
+}
+.eq-hero-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+.eq-hero-inner h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 6px 0 10px;
+}
+.lead {
+  color: #b9c2cc;
+  max-width: 820px;
+}
+
+/* SECTIONS */
+
+.eq-section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 34px 20px 24px;
+}
+.eq-section h2 {
+  font-size: 24px;
+  margin: 0 0 14px;
+}
+.eq-section-alt {
+  background: #0e1217;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* GRID DIRIGEANTS */
+
+.eq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.eq-card {
+  background: var(--panel);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  padding: 18px 16px;
+}
+.initials {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 20% 0, #f4d27b, #c9a54d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #05070a;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.eq-card h3 {
+  margin: 0 0 4px;
+}
+.role {
+  color: var(--gold);
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+.bio {
+  color: #c4ccd7;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* LISTE PRINCIPES */
+
+.eq-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.eq-list li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: #cfd6e0;
+}
+
+/* CTA */
+
+.eq-cta {
+  max-width: 820px;
+  margin: 26px auto 46px;
+  text-align: center;
+  padding: 22px 20px;
+  background: var(--panel);
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+.eq-cta h3 {
+  margin: 0 0 6px;
+}
+.eq-cta p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+.btn {
+  display: inline-block;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+}
+.btn-gold {
+  background: var(--gold);
+  color: #05070a;
+  border-color: transparent;
+}
+.btn-gold:hover {
+  filter: brightness(1.05);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .eq-grid {
+    grid-template-columns: 1fr;
+  }
+}
